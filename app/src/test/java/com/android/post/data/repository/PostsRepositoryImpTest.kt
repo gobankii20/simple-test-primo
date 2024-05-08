@@ -1,7 +1,7 @@
 package com.android.post.data.repository
 
 import com.android.post.data.repository.remote.PostsRepositoryImp
-import com.android.post.domain.model.Post
+import com.android.post.domain.model.PostResponseWrapper
 import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
@@ -25,7 +25,7 @@ class PostsRepositoryImpTest {
 
     @Test
     fun getPostsData() = runBlocking {
-        val posts = mockk<List<Post>>()
+        val posts = mockk<PostResponseWrapper>()
         every { runBlocking { postsRepository.getPosts() } } returns (posts)
 
         val result = postsRepository.getPosts()
