@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import android.text.Html
 import androidx.appcompat.app.AppCompatActivity
 
 fun Context.isNetworkAvailable(): Boolean {
@@ -24,4 +25,8 @@ fun Context.isNetworkAvailable(): Boolean {
         }
     }
     return hasInternet
+}
+
+fun String?.removeHtml(): String? {
+    return if (this == null) null else Html.fromHtml(this).toString()
 }

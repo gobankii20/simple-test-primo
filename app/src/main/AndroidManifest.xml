@@ -14,7 +14,7 @@
             android:name=".MainApplication"
             android:theme="@style/AppTheme">
 
-        <activity android:name="com.android.post.presentation.posts.PostsActivity">
+        <activity android:name="com.android.post.presentation.PostsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.intent.action.VIEW"/>

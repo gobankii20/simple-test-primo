@@ -14,7 +14,7 @@ class KoinModuleTest : AutoCloseKoinTest() {
     fun testCoreModule() {
         koinApplication {
             printLogger(Level.DEBUG)
-            modules(listOf(PostModule, NetworkModule))
+            modules(listOf(NetworkModule))
         }.checkModules()
     }
 

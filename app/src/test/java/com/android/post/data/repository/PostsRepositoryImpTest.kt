@@ -1,5 +1,6 @@
 package com.android.post.data.repository
 
+import com.android.post.data.repository.remote.PostsRepositoryImp
 import com.android.post.domain.model.Post
 import io.mockk.MockKAnnotations
 import io.mockk.every
